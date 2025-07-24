@@ -10,7 +10,7 @@ sample_size = 1000
 bytes_per_row = df.head(sample_size).to_csv(index=False).encode('utf-8')
 avg_bytes_per_row = len(bytes_per_row) / sample_size
 
-target_chunk_size_mb = 45
+target_chunk_size_mb = 40
 target_chunk_size_bytes = target_chunk_size_mb * 1024 * 1024
 rows_per_chunk = int(target_chunk_size_bytes / avg_bytes_per_row)
 
